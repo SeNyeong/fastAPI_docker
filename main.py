@@ -20,7 +20,7 @@ class Course(BaseModel):
 class StudentRequest(BaseModel):
     student_id: str
     name: str
-    courses: conlist(Course, min_items=1)
+    courses: conlist(Course, min_length=1)
 
 class StudentSummary(BaseModel):
     student_id: str
